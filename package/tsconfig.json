@@ -16,7 +16,7 @@
     "forceConsistentCasingInFileNames": true,
     "types": ["vite/client", "node"],
 
-    "jsx": "react",
+    "jsx": "react-jsx",
     "declaration": true,
     "declarationDir": "types",
     "outDir": "dist",
