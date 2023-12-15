@@ -39,6 +39,7 @@ module.exports = defineConfig({
         globals: {
           react: "React",
         },
+        extend: true,
       },
     },
   },
