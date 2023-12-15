@@ -4,13 +4,14 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/pedrohlucena"
   },
-  "version": "1.0.3",
-  "main": "./dist/my-package.umd.js",
-  "module": "./dist/my-package.es.js",
+  "version": "1.1.2",
+  "main": "./dist/my-package.cjs",
+  "module": "./dist/my-package.mjs",
   "exports": {
     ".": {
-      "import": "./dist/my-package.es.js",
-      "require": "./dist/my-package.umd.js"
+      "import": "./dist/my-package.mjs",
+      "require": "./dist/my-package.cjs",
+      "types": "./dist/index.d.ts"
     }
   },
   "repository": {
@@ -80,6 +81,7 @@
     "ts-node": "^10.9.1",
     "typescript": "^4.6.2",
     "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.6.4",
     "vitest": "^0.34.6"
   }
 }

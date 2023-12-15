@@ -2,10 +2,11 @@
 import react from "@vitejs/plugin-react";
 import path from "path";
 import { defineConfig } from "vite";
+import dts from "vite-plugin-dts";
 import packageJson from "./package.json";
 
 const getPackageName = () => {
-  return packageJson.name;
+  return packageJson.name.split("/")[1];
 };
 
 const getPackageNameCamelCase = () => {
@@ -44,5 +45,10 @@ module.exports = defineConfig({
     },
   },
   test: {},
-  plugins: [react()],
+  plugins: [
+    react(),
+    dts({
+      insertTypesEntry: true,
+    }),
+  ],
 });
